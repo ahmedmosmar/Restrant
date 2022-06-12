@@ -1,0 +1,1456 @@
+/* ###################   Start public design ############### */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: changa;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* background-color: var(--content-color); */
+}
+
+@font-face {
+    font-family: changa;
+    src: url(./changa/Changa-Regular.ttf);
+}
+
+:root {
+    --main-color: #21242b;
+    /* --sub-color: #000; */
+    --sub-color: #4ecdc4;
+    --sub-color-dark: #2f9991;
+    --danger-color: #b00404;
+    --white-color: #fff;
+    --border-radius: 5px;
+
+    /* --sub-color: #ffb100; */
+    /* --sub-color: #01a0b5; */
+    /* --sub-color:#027989; */
+
+    /* --sub-color: #04645b; */
+    /* --sub-color: #ff9800; */
+    /* --sub-color: #98a32b; */
+    /* --sub-color:#777111; */
+    /* --sub-color:#990022; */
+    /* --sub-color:#660000; */
+
+    --content-color: #eaeaea;
+    /* --content-color: #1a1b20; */
+    --title-color: #7e7e7e;
+}
+
+.sub-content {
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--content-color);
+    color: white;
+    border-radius: var(--border-radius);
+    min-height: 85vh;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), -2px 8px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub-content h2 {
+    text-align: right;
+    color: var(--main-color);
+    font-size: 1.2em;
+    border-right: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    border-bottom-right-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* ############# Start Public Form  Design ########### */
+.form-content {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    /* margin: 30px; */
+    min-height: 50vh;
+    /* background-color: var(--sub-color); */
+    border-radius: var(--border-radius);
+    border: 2px solid #ddd;
+}
+.form-content form {
+    width: 100%;
+}
+
+.form-content form .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.form-content form .row .form-group {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.form-content form .row .form-group label {
+    color: var(--main-color);
+}
+
+.form-content .form-group.box-submit {
+    width: 100% !important ;
+}
+
+.form-content form .form-controll {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding: 0 15px;
+    line-height: 10px;
+    border: none;
+    outline: none;
+    background-color: #ddd !important;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: right;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--main-color);
+}
+
+.form-content form textarea {
+    height: 150px !important;
+    padding: 7px !important;
+    font-size: 0.9em;
+}
+
+.form-content form .form-controll:nth-child(1),
+.form-content form .form-controll:nth-child(3) {
+    margin-left: 1%;
+}
+
+.form-content form .send-data {
+    padding: 10px;
+    width: 140px;
+    margin: 20px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.form-content form .send-data:hover i.fa-refresh {
+    animation: ani 0.5s linear infinite;
+}
+
+.form-content form .send-data:hover {
+    background-color: var(--sub-color-dark);
+    color: white;
+    box-shadow: 0 0 5px 0 white;
+}
+@keyframes ani {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 880px) {
+    .form-content form .form-group {
+        width: 100% !important;
+    }
+}
+
+/* ############# End Public Form  Design ########### */
+
+/* ############### Start Public Table ############### */
+table {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    direction: rtl;
+    border-spacing: 0;
+}
+
+table thead {
+    background-color: var(--main-color);
+    font-size: 0.8em;
+}
+
+table thead tr td {
+    padding: 15px 0 !important;
+    font-weight: 600;
+    color: white;
+}
+
+table tr td {
+    font-size: 0.9em;
+    padding: 5px 0;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transition: 0.3s ease;
+    color: var(--main-color);
+}
+
+table td:first-of-type {
+    border-right: 2px solid white;
+}
+
+table tbody {
+    background-color: transparent;
+}
+
+table tr {
+    transition: 0.5s ease-in-out;
+}
+
+table tr:hover {
+    background-color: var(--main-color);
+}
+
+table tbody tr:hover {
+    background-color: var(--main-color);
+    transform: scaleX(101%);
+    border-radius: var(--border-radius);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+table tbody tr:hover td {
+    color: white;
+}
+
+table .opartion {
+    width: 20%;
+}
+
+table .opartion button {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 5px 0;
+    width: 40%;
+    display: inline-block;
+}
+
+table .opartion button a {
+    color: white;
+    text-decoration: none;
+}
+
+table .opartion .btn-edit-data {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+table .opartion .btn-delete-data {
+    background-color: var(--danger-color);
+}
+
+@media (max-width: 1010px) {
+    .opartion button a span {
+        display: none;
+    }
+}
+
+/* ############### End Public Table ############### */
+
+/* ############### Start Side Menu Design ##############  */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.row .content {
+    text-align: center;
+    padding: 0;
+    color: var(--title-color);
+    position: relative;
+}
+
+.content .fa-bars {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--sub-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.content .fa-bars:hover {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+.row .sidemenu {
+    background-color: var(--main-color);
+    min-height: 100vh;
+    text-align: center;
+    padding: 5px;
+    font-family: changa;
+    transition: transform 5s ease-in-out;
+}
+
+.sidemenu.hide {
+    display: none;
+}
+
+.sidemenu .dashboard {
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border: 4px solid var(--sub-color);
+    border-radius: var(--border-radius);
+}
+
+.sidemenu .dashboard span,
+.dashboard i {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.sidemenu ul {
+    list-style: none;
+}
+
+.sidemenu ul li.active {
+    background-color: var(--sub-color);
+}
+
+.sidemenu ul li {
+    margin-bottom: 10px;
+    padding: 5px 0 5px;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: right;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.sidemenu ul li:hover {
+    background-color: var(--sub-color);
+}
+
+.sidemenu ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.sidemenu ul li i.icon-menu {
+    margin-right: 5px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.sidemenu ul li i.fa-home {
+    color: #04ff00;
+}
+
+.sidemenu ul li i.fa-gear {
+    color: #ff5722;
+}
+
+.sidemenu ul li i.fa-sitemap {
+    color: #03a9f4;
+}
+
+.sidemenu ul li i.fa-bar-chart-o {
+    color: #ffc107;
+}
+
+.sidemenu i.fa-dashboard {
+    color: #fbe100;
+}
+
+.sidemenu ul li i.fa-gears {
+    color: #f0ff07;
+}
+
+i.fa-list-ul {
+    color: #00ffff !important;
+}
+
+i.fa-male {
+    color: #027989 !important;
+}
+
+i.fa-truck {
+    color: #ffb100 !important;
+}
+
+i.fa-money {
+    color: #2de951 !important;
+}
+
+i.fa-level-up {
+    color: blue !important;
+}
+
+i.fa-level-down {
+    color: #990022 !important;
+}
+
+.sidemenu ul li i.fa-down {
+    font-size: 0.7em;
+    transform: translateX(-25px);
+}
+
+.sidemenu ul .sub-li-menu {
+    padding: 5px 10px;
+}
+
+.sidemenu ul .sub-li-menu a {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+@media (max-width: 790px) {
+    .sidemenu ul li a span.title {
+        display: none;
+    }
+
+    .sidemenu ul li a {
+        display: flex;
+        justify-content: center !important;
+    }
+    .sidemenu ul li i.icon-menu {
+        font-size: 2em;
+        width: 60px;
+        height: 60px;
+    }
+}
+@media (max-width: 574px) {
+    .sidemenu ul li a span.title {
+        display: block;
+    }
+    .sidemenu ul li a {
+        display: flex;
+        justify-content: right !important;
+    }
+    .sidemenu ul li i.icon-menu {
+        font-size: 1.2em;
+        width: 40px;
+        height: 40px;
+    }
+}
+/* ############### End Side Menu Design ##############  */
+
+/* ############### Start Form Login Design ############# */
+.login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: url("../images/bg-header.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.login-body {
+    background-color: #dddddde0;
+    width: 50%;
+    min-height: 70vh;
+    /* padding-bottom: 20px; */
+    border-radius: var(--border-radius);
+}
+
+.login-content .login-header {
+    text-align: right;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: var(--sub-color);
+    border-radius: var(--border-radius);
+}
+
+.login-content .login-header h5 {
+    margin-right: 60px;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: white;
+}
+
+.login-form {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    width: 100%;
+    /* margin: auto; */
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+}
+
+.login-form .form-group label {
+    color: white;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form .form-group input {
+    color: var(--main-color);
+    width: 70%;
+    height: 45px;
+    outline: none;
+    padding: 0 15px;
+    padding-right: 6%;
+    line-height: 10px;
+    background-color: transparent !important;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s ease-in;
+}
+
+.login-form .form-group input:focus  {
+    border-bottom: 5px solid var(--sub-color);
+}
+.login-form .form-group input:focus + i {
+    color: var(--sub-color);
+}
+@media (max-width: 1000px) {
+    .login-body {
+        width: 80%;
+    }
+}
+
+.login-form .box-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form button {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+.login-form button:hover {
+    color: white;
+    background-color: var(--sub-color-dark);
+}
+
+.login-form .form-group span {
+    display: block !important;
+}
+
+.login-form .form-group i {
+    position: absolute;
+    right: 16%;
+    top: 34px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: white;
+    background-color: transparent;
+}
+
+
+
+
+/* ########### End form login ########### */
+
+/* ########### Start Pagination Design ########## */
+.link-paginate {
+    margin-top: 20px;
+    box-shadow: 0 0 4px 0 #8d8d8da3;
+    padding: 5px 0;
+}
+
+.link-paginate .pagination {
+    margin: 0;
+}
+
+.link-paginate .pagination .active {
+    background-color: var(--sub-color) !important;
+    color: white !important;
+    transition: 0.5s ease-in-out;
+}
+
+.link-paginate .pagination .page-item {
+    padding: 7px;
+}
+
+.link-paginate .pagination .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--sub-color);
+    background-color: white;
+    border: 1px solid white;
+    font-weight: 900;
+    border-radius: 0;
+}
+
+/* ########### End Pagination Design ########## */
+
+/* ########### Start Back  Button Design  ########### */
+.sub-content .back {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.sub-content .back button {
+    padding: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--sub-color-dark);
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in;
+    cursor: pointer;
+}
+
+.sub-content .back button a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-content .back button a i,
+.sub-content .back button {
+    transition: 0.5s ease-in-out;
+}
+
+.sub-content .back button:hover {
+    background-color: white;
+}
+
+.sub-content .back button:hover a {
+    color: var(--main-color);
+}
+
+.sub-content .back button:hover a i {
+    transform: translateX(-7px);
+}
+
+/* ########### End Back  Button Design  ########### */
+
+/* ======= Start search content  ========  */
+
+.sub-content .search-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.search-content .box-search {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    padding: 5px 0;
+    justify-content: end;
+}
+
+.search-content form button[type="submit"] {
+    margin-left: 10px;
+    width: 45px !important;
+    height: 45px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sub-color);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: 3px solid var(--sub-color);
+    color: white;
+    margin: 0;
+    outline: none;
+}
+
+.search-content .box-search label:hover {
+    background-color: var(--sub-color);
+}
+
+.search-content .box-search .f-control {
+    text-align: right;
+    font-size: 1em;
+    color: white;
+    padding: 2px 10px !important;
+    background-color: transparent;
+    border: 2px solid var(--sub-color);
+    border-radius: 0;
+    outline: none !important;
+    width: 70%;
+    margin: 0;
+}
+
+/* ======= End search content  ========  */
+
+/* ======= Start sweetAlert design  ========  */
+.swal-footer {
+    text-align: center;
+}
+.swal-modal .swal-title {
+    font-size: 20px !important;
+}
+.swal-button {
+    /* border-radius: 0; */
+    outline: none;
+}
+
+.swal-button:not([disabled]):hover {
+    background-color: var(--sub-color);
+}
+/* ======= End  sweetAlert design  ========  */
+
+/* ###################   End public design ############### */
+
+/* ======= Start header style ====== */
+
+.header {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header .down button{
+    background-color: var(--sub-color) !important;
+    color: white;
+    min-width: 150px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+.dropdown-toggle::after{
+font-size: 23px;
+}
+
+.header .down button .caret{
+ margin-left: 10px;
+}
+
+.dropdown-menu{
+    top: 8% !important;
+    transform: translateX(10px);
+    min-width: 11.5rem;
+}
+
+.dropdown-menu li{
+    
+}
+.dropdown-menu.show:hover{
+     /* transform: translateX(0) !important; */
+}
+
+.dropdown-menu.show{
+    /* display: block; */
+    background-color: khaki;
+      display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header .user {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.header .user h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.header .user button {
+    background-color: var(--sub-color);
+    color: white;
+    margin-right: 20px;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.header .user button a {
+    text-decoration: none;
+    color: white;
+}
+.header .user button:hover {
+    background-color: transparent;
+    box-shadow: 0 0 6px 0 var(--sub-color);
+}
+
+/* ======= End header style ====== */
+
+/* ======= Start home page style ====== */
+
+.genarle-report {
+    /* background-color: var(--title-color); */
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+.genarle-report .row {
+    display: flex;
+    justify-content: center;
+}
+
+.genarle-report .col-lg-2,
+.genarle-report .col-sm-3,
+.genarle-report .col-md-4 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.genarle-report .content-r {
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.genarle-report .content-r hr {
+    border: 2px solid var(--main-color);
+}
+
+.genarle-report .content-r i {
+    font-size: 2em;
+    position: relative;
+}
+
+.genarle-report .content-r span {
+    display: block;
+    color: var(--title-color);
+}
+
+.genarle-report .content-r .count {
+    font-size: 1.2em;
+}
+
+.animation {
+    animation-name: animate;
+    animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animation2 {
+    animation-name: animate2;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+.content-r {
+    position: relative;
+}
+
+.span {
+    border: 2px solid #ffb100;
+    border-radius: 50%;
+    border-top-color: white;
+    border-bottom-color: white;
+    width: 10px;
+    height: 10px;
+    top: 25px;
+    right: 23px;
+    position: absolute;
+}
+
+.span2 {
+    border: 2px solid #ffb100;
+    border-radius: 50%;
+    border-top-color: white;
+    border-bottom-color: white;
+    width: 10px;
+    left: 25px;
+    top: 25px;
+    height: 10px;
+    position: absolute;
+}
+@keyframes animate {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes animate2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ======= End home page style ====== */
+
+/* =============== Start category page style =============== */
+
+.search-content .select-count-cat {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40%;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-content .select-count-cat label {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.search-content .select-count-cat select {
+    width: 100px;
+    padding: 2px;
+    margin-right: 10px;
+    outline: none !important;
+}
+
+/* ======= End category page style ====== */
+
+/* ======= Start type page style ====== */
+
+/* ======= End type page style ====== */
+
+/* ======= Start weater page style ====== */
+
+/* ======= End weater page style ====== */
+
+/* ======= Start register user page style ====== */
+
+/* ======= End register user page style ====== */
+
+/* ======= Start sales  page style ====== */
+.sales-content {
+    background-color: var(--content-color);
+    min-height: 100vh;
+}
+
+.sales-content .header-sales {
+    background-color: var(--sub-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 20px;
+}
+
+.sales-content .header-sales button {
+    box-shadow: 0 0 3px #817d7dc4;
+    transition: 0.5s ease-in-out;
+    border-radius: 0;
+}
+
+.sales-content .header-sales button i {
+    transition: 0.5s ease-in-out;
+}
+
+.sales-content .header-sales button:hover i {
+    transform: translateX(-5px);
+}
+
+.sales-content .header-sales button,
+.sales-content .header-sales h5 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+}
+
+.sales-content .header-sales h5 i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+.header-sales button:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.sales-content .tables {
+    padding: 15px;
+}
+
+.sales-content .tables .row {
+    flex-direction: row-reverse;
+    padding: 0 15px;
+}
+
+.sales-content .tables .col-md-3 {
+    padding: 10px;
+    margin: 10px 0;
+    min-height: 100px;
+}
+
+.sales-content .tables .direct-sales {
+    padding: 40px 10px;
+    background-color: var(--sub-color);
+    cursor: pointer;
+    height: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(32, 23, 23, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sales-content .tables .direct-sales:hover img,
+.tables .new-table:hover img,
+.tables .table:hover img {
+    transform: scale(1.2);
+}
+
+.tables .direct-sales span,
+.tables .new-table span,
+.tables .table span {
+    display: block;
+    font-size: 1.4em;
+    color: white;
+}
+
+.tables img {
+    margin: 5px 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tables a {
+    text-decoration: none;
+}
+
+.tables .table,
+.tables .new-table {
+    height: 100%;
+    padding: 40px 10px;
+    background-color: var(--content-color);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(32, 23, 23, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.tables .new-table span,
+.tables .table span {
+    color: var(--main-color);
+}
+
+/* ======= End  sales page style ====== */
+
+/* ======= Start  sales table page style ====== */
+.sales-table {
+    min-height: 120vh;
+    padding-bottom: 50px;
+}
+.sales-table .row {
+    margin: 0;
+    padding: 10px;
+    min-height: 120vh;
+}
+
+.sales-table .full-content {
+    /* background-color: red; */
+}
+
+.full-content .fill-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 10px 20px;
+    border-bottom: 5px solid var(--sub-color);
+}
+
+.full-content .fill-title h4,
+.full-content .fill-title span {
+    color: var(--main-color);
+    font-size: 1.2em;
+    color: white;
+}
+
+.full-content button {
+    min-width: 100px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    background-color: var(--sub-color);
+    border-radius: var(--border-radius);
+}
+
+.full-content .opartion {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 50px 0 0;
+}
+
+.full-content button {
+    width: 24%;
+}
+
+.full-content button.reject {
+    margin: 0 15px;
+    background-color: var(--danger-color);
+}
+
+/* =========== Start Oparation push Money ========== */
+.money {
+    margin: 30px 0;
+    text-align: right;
+}
+
+.ckeck-money {
+    text-align: right;
+    margin: 10px 0;
+    padding: 5px;
+    visibility: hidden;
+    border-radius: var(--border-radius);
+}
+
+.ckeck-money.error {
+    background-color: var(--danger-color);
+}
+
+.ckeck-money.success {
+    background-color: #39d70c;
+}
+
+.ckeck-money span {
+    color: white;
+}
+
+.money strong {
+    background-color: white;
+    color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+
+.full-content .push {
+    margin: 10px 0;
+    padding: 10px;
+    min-height: 20vh;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.push .kash form input[type="text"],
+.weaters form select {
+    width: 30%;
+    border: 2px solid white;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 0.9em;
+    text-align: right;
+    direction: rtl;
+    background-color: #ddd;
+    color: var(--main-color);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.push .weaters,
+.push .kash {
+    margin: 15px 0;
+}
+
+.push .weaters,
+.push .weaters form,
+.push .kash,
+.push .kash form {
+    display: flex;
+    justify-content: right;
+}
+
+.push .weaters form,
+.push .kash form {
+    width: 100%;
+    flex-direction: row-reverse !important;
+}
+
+.push .weaters form label,
+.push .kash form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20% !important;
+    border: 3px solid #ddd;
+    background-color: white;
+    height: 45px;
+    margin: 0;
+    color: var(--main-color);
+    padding: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.push form select option {
+    color: var(--main-color);
+    background-color: white !important;
+}
+
+/* =========== Start Oparation push Money ========== */
+
+.food-list .types-foods {
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+}
+
+.types-foods .col-md-6 {
+    padding: 0 5px;
+}
+
+.food-list .col-md-2 {
+    background-color: var(--danger-color);
+    padding: 0;
+    text-align: center;
+}
+
+.food-list ul {
+    list-style: none;
+    width: 100%;
+}
+
+.types-foods .cat {
+    z-index: 999;
+}
+.food-list ul li {
+    padding: 10px 5px;
+    margin: 10px 0;
+    background-color: white;
+    color: var(--main-color);
+    cursor: pointer;
+    box-shadow: 0 0 3px #817d7dc4;
+    border-radius: var(--border-radius);
+}
+.food-list ul#ul-types {
+    /* color: #000; */
+    /* transition: 1s ease-in-out; */
+    /* transform: translateY(200px); */
+    /* display: none; */
+    /* background-color: white; */
+}
+/* .ifect{ */
+/* animation-name: ifect;
+   animation-duration: .5s;
+   /* animation-direction: ; */
+/* animation-fill-mode: ease;  */
+/* animation: ifect .7s ease-in-out ; */
+/* animation-name: ifect;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+} */
+@keyframes ifect {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.food-list ul li.select-type-food {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    z-index: 9;
+    font-size: 14px;
+    padding: 5px 15px;
+}
+.select-type-food {
+}
+
+.full-content .orders table thead {
+    background-color: var(--sub-color);
+}
+.full-content .orders {
+    /* background-color: var(--title-color); */
+}
+
+.sales-table .food-list {
+    /* background-color: saddlebrown; */
+    padding: 10px;
+    /* background-color: #fffdfdf5 */
+    /* background-color: var(--sub-color); */
+    background-color: #ddd;
+    border-radius: var(--border-radius);
+}
+.food-list h5 {
+    padding: 9px;
+    text-align: right;
+    color: white;
+    border-bottom: 5px solid var(--main-color);
+}
+.food-list .col-md-3 {
+    /* background-color: var(--danger-color); */
+    padding: 5px;
+}
+.food-list .type-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: var(--main-color);
+    color: white;
+    /* box-shadow: 0 0 6px 0 var(--sub-color); */
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.food-list .type-food:hover {
+    box-shadow: 0 0 6px 0 var(--sub-color);
+}
+
+.food-list .type-food i {
+    background-color: var(--sub-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#food-selected {
+    cursor: no-drop;
+    background-color: #0bd20b;
+}
+
+.food-delete,
+.cancel_order {
+    background-color: var(--danger-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-bottom: 5px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.type_amount {
+    position: relative;
+    width: 150px;
+}
+
+.increace,
+.dicreace {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.increace {
+    right: 0;
+    background-color: #38ff00;
+}
+
+.dicreace {
+    left: 0;
+    background-color: var(--danger-color);
+}
+
+.hide-order {
+    display: none;
+}
+.done-reset {
+    cursor: no-drop !important;
+}
+/* ======= End  sales table page style ====== */
+
+/* ======= Start  buys  page style ====== */
+
+/* ======= End  buys  page style ====== */
+
+/* ======= Start  suppliers  page style ====== */
+
+/* ======= End  supplier page style ====== */
+
+/* ======= Start  reporting page style ====== */
+
+/* ======= End  reporting page style ====== */

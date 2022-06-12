@@ -1,0 +1,128 @@
+/* ###################   Start public design ############### */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: changa;
+    width: 100%;
+    height: 100%;
+    background-color: var(--content-color);
+}
+
+@font-face {
+    font-family: changa;
+    src: url(./changa/Changa-Regular.ttf);
+}
+
+:root {
+    --main-color: #21242b;
+    /* --sub-color: #4ecdc4; */
+    --danger-color: #b00404;
+    --sub-color: #01a0b5;
+    --content-color: #eaeaea;
+    --title-color: #7e7e7e;
+}
+
+
+.report-content{
+    position: relative;
+}
+.report-content .box-print{
+  background-color: var(--title-color);
+  padding: 15px;
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.report-content .box-print button.back{
+background-color: var(--sub-color);
+
+}
+.report-content .box-print button.back a,
+.report-content .box-print button a{
+color: white;
+text-decoration: none;
+}
+.report-content .box-print button a{
+  color: var(--main-color);
+}
+ .report-content .box-print button i{
+   margin: 0 10px;
+
+ }
+ .report-content .box-print button{
+    margin:0 10px ;
+    width: 150px ;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    color: var(--main-color);
+    outline: none;
+    font-size: 18px;
+}
+ .report-content .container {
+ background-color: white;
+ }
+.report-details{
+    margin: 100px 0 0;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+
+}
+.report-details  .ganral-details,
+.report-details  .about-report{
+    text-align: right;
+    color: var(--main-color);
+}
+
+.report-details  .about-report{
+    margin-right: 50%;
+}
+
+
+.report-content table {
+    direction: rtl;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.report-content table thead{
+    background-color: white;
+    color: var(--main-color);
+}
+
+
+.report-content  table td {
+    /* border-left: 2px solid var(--main-color); */
+    padding: 10px 0;
+    transition: 0.5s ease-in-out;
+    color: var(--main-color);
+}
+table td:first-of-type {
+    /* border-right: 2px solid white; */
+}
+table tbody {
+    background-color: white;
+}
+
+table tr {
+    transition: 0.5s ease-in-out;
+}
+
+table tr:hover {
+    background-color: var(--content-color);
+}
